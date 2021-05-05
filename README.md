@@ -1,4 +1,4 @@
-![WebdriverIO, Mocha, Chai and Javascript](./images/webdriverio-mocha-chai-javascript.png?raw=true "WebdriverIO, Mocha, Chai and Javascript")
+![WebdriverIO, Mocha, Chai and Javascript Test Automation Framework](./images/webdriverio-mocha-chai-javascript.png?raw=true "WebdriverIO, Mocha, Chai and Javascript Test Automation Framework")
 
 # WebdriverIO Test Automation Examples
 This is sample Test Automation framework designed using WebdriverIO, Mocha, Chai and Javascript. And in this framework we will see some basic working examples for learning.
