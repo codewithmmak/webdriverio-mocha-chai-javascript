@@ -11,10 +11,17 @@ describe('Checkbox Tests', function () {
         expect(checkboxesPage.isElementSelected(2)).equal(true);
     })
 
-    it.only('should click Checkbox 1', () => {
+    it('should click Checkbox 1', () => {
         browser.url('/')
         homePage.clickLink('Checkboxes')
         checkboxesPage.clickCheckbox(1)
         expect(checkboxesPage.checkboxes(1).isSelected()).equal(true)
+    })
+
+    it.only('should uncheck checkbox 1', () => {
+        browser.url('/')
+        homePage.clickLink('Checkboxes')
+        checkboxesPage.clickCheckbox(1)
+        expect(checkboxesPage.checkboxes(1).isSelected()).equal(false)
     })
 })

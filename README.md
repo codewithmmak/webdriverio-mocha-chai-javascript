@@ -19,7 +19,7 @@ This is sample Test Automation framework designed using WebdriverIO, Mocha, Chai
 * This will run all the test found in path `./test/specs/**/*.js` which is specified in `wdio.conf.js` file
 
 ### How to Run Single Spec
-* Run Test: `npm test -- --spec ./test/specs/element-action.test.js`
+* Run Test: `npm test -- --spec ./test/specs/checkboxes.test.js`
 
 ### How to Run Suite
 * Run Test: `npm run test:suite`
