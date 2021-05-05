@@ -29,12 +29,13 @@ exports.config = {
 
     suites: {
         oneTest: [
-            './test/specs/element-action.e2e.js'
+            './test/specs/element-action.test.js'
         ],
         e2e: [
-            './test/specs/element.e2e.js',
-            './test/specs/element-state.e2e.js',
-            './test/specs/element-action.e2e.js'
+            './test/specs/element.test.js',
+            './test/specs/element-state.test.js',
+            './test/specs/element-action.test.js',
+            './test/specs/login.test.js'
         ]
     },
 

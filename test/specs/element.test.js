@@ -1,10 +1,10 @@
-const homePage = require('../../pages/home.po')
+//@ts-check
+const homePage = require('../pages/home.page')
 
 describe('Interacting with elements', function () {
 
     it('Get Heading from elements', () => {
         browser.url('/')
-        // let text = $(".heading").getText()
         let text = homePage.pageHeader.getText
         console.log('The heading is: ' + text)
     })
@@ -23,13 +23,11 @@ describe('Interacting with elements', function () {
 
     it('Get all the link on Home page', () => {
         browser.url('/')
-
         homePage.getLiText()
     })
 
     it('Get specific link on Home page', () => {
         browser.url('/')
-
         homePage.getSpecificElementText(3)
     })
 

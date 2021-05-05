@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "wdio run ./wdio.conf.js",
-    "test:suite": "wdio run ./wdio.conf.js --suite oneTest"
+    "test:suite": "wdio run ./wdio.conf.js --suite e2e"
   },
   "keywords": [
     "WebDriverIO",
@@ -29,6 +29,5 @@
     "local-runner": "^0.1.1-alpha",
     "wdio-chromedriver-service": "^7.0.0",
     "webdriverio": "^7.5.3"
-  },
-  "dependencies": {}
+  }
 }

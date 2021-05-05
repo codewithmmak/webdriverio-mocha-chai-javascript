@@ -1,4 +1,5 @@
-const homePage = require('../../pages/home.po')
+//@ts-check
+const homePage = require('../pages/home.page')
 
 describe('Element State Tests', function () {
 
