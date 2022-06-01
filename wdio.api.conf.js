@@ -27,7 +27,7 @@ exports.config = {
     // will be called from there.
     //
     specs: [
-        './test/specs/**/*.js'
+        './api-tests/*.js'
     ],
     // Patterns to exclude.
     exclude: [
@@ -65,20 +65,20 @@ exports.config = {
         //     port: 4445,
         //     acceptInsecureCerts: true
         // },
-        {
-            /*
-            * safaridriver can only handle 1 instance unfortunately
-            * https://developer.apple.com/documentation/webkit/about_webdriver_for_safari
-            */
-            maxInstances: 1,
-            browserName: 'safari',
-            port: 4444,
-            acceptInsecureCerts: true
-        },
         // {
-        //     browserName: 'firefox',
-        //     port: 4446
+        //     /*
+        //     * safaridriver can only handle 1 instance unfortunately
+        //     * https://developer.apple.com/documentation/webkit/about_webdriver_for_safari
+        //     */
+        //     maxInstances: 1,
+        //     browserName: 'safari',
+        //     port: 4444,
+        //     acceptInsecureCerts: true
         // },
+        {
+            browserName: 'firefox',
+            port: 4446
+        },
         // {
         //     browserName: 'MicrosoftEdge',
         //     port: 17556
@@ -134,11 +134,7 @@ exports.config = {
     // commands. Instead, they hook themselves up into the test process.
 
     services: [
-        'chromedriver',
-        'safaridriver',
-        'geckodriver',
-        'edgedriver',
-        'vscode'
+        'geckodriver'
     ],
 
     // Framework you want to run your specs with.
@@ -157,7 +153,7 @@ exports.config = {
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
     // reporters: ['spec'],
-    reporters: ['spec',
+    reporters: ['spec', 'mochawesome',
         ['allure', {
             outputDir: 'allure-results',
             disableWebdriverStepsReporting: true,
