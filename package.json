@@ -25,7 +25,7 @@
         "wdio-edgedriver-service": "^1.2.0",
         "wdio-geckodriver-service": "^4.0.0",
         "wdio-safaridriver-service": "^2.0.0",
-        "wdio-vscode-service": "^3.0.2",
+        "wdio-vscode-service": "^5.0.0",
         "wdio-wait-for": "^2.2.6"
     },
     "scripts": {
