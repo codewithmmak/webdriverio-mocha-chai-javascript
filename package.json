@@ -24,7 +24,7 @@
         "wdio-chromedriver-service": "^7.3.2",
         "wdio-edgedriver-service": "^1.2.0",
         "wdio-geckodriver-service": "^2.1.2",
-        "wdio-safaridriver-service": "^1.0.0",
+        "wdio-safaridriver-service": "^2.0.0",
         "wdio-vscode-service": "^3.0.2",
         "wdio-wait-for": "^2.2.6"
     },
