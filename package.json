@@ -26,7 +26,7 @@
         "wdio-geckodriver-service": "^4.0.0",
         "wdio-safaridriver-service": "^2.0.0",
         "wdio-vscode-service": "^5.0.0",
-        "wdio-wait-for": "^2.2.6"
+        "wdio-wait-for": "^3.0.0"
     },
     "scripts": {
         "saucelabsTunnel": "./saucelabTunnel.sh",
