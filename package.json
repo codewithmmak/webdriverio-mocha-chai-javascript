@@ -7,7 +7,7 @@
         "@babel/core": "^7.20.12",
         "@babel/preset-env": "^7.20.2",
         "@babel/register": "^7.18.9",
-        "@faker-js/faker": "^7.6.0",
+        "@faker-js/faker": "^8.0.0",
         "@wdio/allure-reporter": "^8.3.5",
         "@wdio/appium-service": "^8.3.5",
         "@wdio/cli": "^8.3.5",
