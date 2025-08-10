@@ -15,7 +15,7 @@
         "@wdio/mocha-framework": "^8.3.0",
         "@wdio/sauce-service": "^8.3.5",
         "@wdio/spec-reporter": "^8.3.0",
-        "appium": "^1.22.3",
+        "appium": "^2.0.0",
         "chai": "^4.3.7",
         "chromedriver": "^112.0.0",
         "mocha": "^10.2.0",
