@@ -1,42 +1,36 @@
 
+const Page = require('./base.page');
 
-import Page from './page';
-
-/**
- * sub page containing specific selectors and methods for a specific page
- */
 class LoginPage extends Page {
-    /**
-     * define selectors using getter methods
-     */
-    get inputUsername () {
-        return $('#username');
+    get h2Header() { return $('div[class="example"] h2'); }
+    get username() { return $('#username'); }
+    get password() { return $('#password'); }
+    get btnSubmit() { return $('button[type="submit"]'); }
+
+    async enterUsername(text) {
+        await this.username.waitForDisplayed();
+        await this.username.setValue(text);
     }
 
-    get inputPassword () {
-        return $('#password');
+    async enterPassword(text) {
+        await this.password.waitForDisplayed();
+        await this.password.setValue(text);
     }
 
-    get btnSubmit () {
-        return $('button[type="submit"]');
-    }
-
-    /**
-     * a method to encapsule automation code to interact with the page
-     * e.g. to login using username and password
-     */
-    async login (username, password) {
-        await this.inputUsername.setValue(username);
-        await this.inputPassword.setValue(password);
+    async clickLoginBtn() {
+        await this.btnSubmit.waitForClickable();
         await this.btnSubmit.click();
     }
 
-    /**
-     * overwrite specific options to adapt it to page object
-     */
-    open () {
+    async login(username, password) {
+        await this.enterUsername(username);
+        await this.enterPassword(password);
+        await this.clickLoginBtn();
+    }
+
+    open() {
         return super.open('login');
     }
 }
 
-export default new LoginPage();
+module.exports = new LoginPage();

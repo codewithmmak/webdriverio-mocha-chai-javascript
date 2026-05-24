@@ -1,9 +1,3 @@
-// Get Current Date & Time - for unqiue build name
-var today = new Date();
-var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
-var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-var dateTime = date + ' ' + time;
-
 exports.config = {
     //
     // ====================
@@ -31,7 +25,7 @@ exports.config = {
     ],
     // Patterns to exclude.
     exclude: [
-        // 'path/to/excluded/files'
+        './test/specs/api/**/*.js'
     ],
     //
     // ============
@@ -49,7 +43,7 @@ exports.config = {
     // and 30 processes will get spawned. The property handles how many capabilities
     // from the same test should run tests.
     //
-    maxInstances: 10,
+    maxInstances: 5,
     //
     // If you have trouble getting all important capabilities together, check out the
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
@@ -66,13 +60,8 @@ exports.config = {
         //     acceptInsecureCerts: true
         // },
         {
-            /*
-            * safaridriver can only handle 1 instance unfortunately
-            * https://developer.apple.com/documentation/webkit/about_webdriver_for_safari
-            */
-            maxInstances: 1,
-            browserName: 'safari',
-            port: 4444,
+            maxInstances: 5,
+            browserName: 'chrome',
             acceptInsecureCerts: true
         },
         // {
@@ -115,7 +104,7 @@ exports.config = {
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
-    baseUrl: 'http://localhost',
+    baseUrl: require('./config/env').baseUrl,
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,
@@ -125,7 +114,7 @@ exports.config = {
     connectionRetryTimeout: 120000,
     //
     // Default request retries count
-    connectionRetryCount: 0,
+    connectionRetryCount: 2,
 
     //
     // Test runner services
@@ -133,13 +122,7 @@ exports.config = {
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
 
-    services: [
-        'chromedriver',
-        'safaridriver',
-        'geckodriver',
-        'edgedriver',
-        'vscode'
-    ],
+    services: [],
 
     // Framework you want to run your specs with.
     framework: 'mocha',

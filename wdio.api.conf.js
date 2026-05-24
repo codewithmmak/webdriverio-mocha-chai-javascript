@@ -1,9 +1,3 @@
-// Get Current Date & Time - for unqiue build name
-var today = new Date();
-var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
-var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-var dateTime = date + ' ' + time;
-
 exports.config = {
     //
     // ====================
@@ -27,7 +21,7 @@ exports.config = {
     // will be called from there.
     //
     specs: [
-        './api-tests/*.js'
+        './test/specs/api/*.js'
     ],
     // Patterns to exclude.
     exclude: [
@@ -115,7 +109,7 @@ exports.config = {
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
-    baseUrl: 'http://localhost',
+    baseUrl: require('./config/env').apiBaseUrl,
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,
