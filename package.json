@@ -17,7 +17,7 @@
         "@wdio/sauce-service": "^9.27.1",
         "@wdio/spec-reporter": "^9.27.1",
         "appium": "^3.4.2",
-        "chai": "^4.5.0",
+        "chai": "^6.0.0",
         "chromedriver": "^149.0.0",
         "eslint": "^9.27.0",
         "eslint-config-prettier": "^10.1.5",
