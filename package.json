@@ -21,7 +21,7 @@
         "chromedriver": "^149.0.0",
         "eslint": "^9.27.0",
         "eslint-config-prettier": "^10.1.5",
-        "globals": "^15.15.0",
+        "globals": "^17.0.0",
         "mocha": "^11.7.6",
         "mochawesome": "^7.1.4",
         "prettier": "^3.5.3",
